@@ -31,6 +31,5 @@ ScrollReveal({
    #services .cards,
    #about,
    #about header,
-   #about .content
-  `
+   #about .content`
 );
