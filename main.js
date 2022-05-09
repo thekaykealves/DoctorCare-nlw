@@ -1,9 +1,23 @@
 function onScroll(){
+  showNavOnScroll();
+  showBackToTopButtonOnScroll();
+}
+
+function showNavOnScroll() {
   const navigation = document.getElementById('navigation');
   if(scrollY > 0){
     navigation.classList.add('scroll');
   } else {
-    navigation.classList.remove('scroll')
+    navigation.classList.remove('scroll');
+  }
+}
+
+function showBackToTopButtonOnScroll(){
+  const backToTopButton = document.getElementById('backToTopButton');
+  if(scrollY > 400){
+    backToTopButton.classList.add('show');
+  } else {
+    backToTopButton.classList.remove('show');
   }
 }
 
@@ -24,6 +38,8 @@ ScrollReveal({
   reset: true
 }).reveal(
   `#home,
+   #home header,
+   #home .content,
    #home img,
    #home .stats,
    #services,
@@ -31,5 +47,9 @@ ScrollReveal({
    #services .cards,
    #about,
    #about header,
-   #about .content`
+   #about .content,
+   #contact,
+   #contact header,
+   #contact .content,
+   footer`
 );
